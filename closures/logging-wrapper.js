@@ -1,5 +1,5 @@
 var wrapLog = function (callback, name) {
-  return function(x, y, z) {
+  return function() {
     console.log(name + "(" + [...arguments].join(", ") + ")" + " => " + callback.apply(null, [...arguments]));
   };
 };
